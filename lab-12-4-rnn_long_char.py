@@ -10,6 +10,8 @@ sentence = ("if you want to build a ship, don't drum up people together to "
             "collect wood and don't assign them tasks and work, but rather "
             "teach them to long for the endless immensity of the sea.")
 
+# why it does not work well?
+# logit is not accurate + RNN is not wide & deep enough...
 char_set = list(set(sentence))
 char_dic = {w: i for i, w in enumerate(char_set)}
 

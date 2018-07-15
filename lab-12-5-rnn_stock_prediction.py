@@ -67,8 +67,8 @@ for i in range(0, len(y) - seq_length):
     dataY.append(_y)
 
 # train/test split
-train_size = int(len(dataY) * 0.7)
-test_size = len(dataY) - train_size
+train_size = int(len(dataY) * 0.7)  # train set은 70%로 하고,
+test_size = len(dataY) - train_size # test_set은 30%로 한다.
 trainX, testX = np.array(dataX[0:train_size]), np.array(
     dataX[train_size:len(dataX)])
 trainY, testY = np.array(dataY[0:train_size]), np.array(
@@ -118,3 +118,7 @@ with tf.Session() as sess:
     plt.xlabel("Time Period")
     plt.ylabel("Stock Price")
     plt.show()
+
+    #Implement stock prediction using linear regression only VS LSTM
+    #Improve results using more features such as keywords and/or sentiments in top news
+
